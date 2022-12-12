@@ -15,13 +15,13 @@ class Bible:
 
         # load `bible-3letter.txt` that contains
         # 3-letter abbreviations of the Bible book names (e.g. Gen, Exo, Pe1, ...)
-        with open(os.path.join(self.path_data, "/Users/song-yeji/Desktop/p/FinalExam/bible-3letter.txt"), "rt") as fin:
+        with open(os.path.join(self.path_data, "bible-3letter.txt"), "rt") as fin:
             self.book_abbr_names = fin.read().splitlines()
             assert len(self.book_abbr_names) == 66
 
         # load `bible-fullname.txt` that contains
         # the full Bible book names (non-abbreviated; e.g. Genesis, Exodus, 1 Peter, ...)
-        with open(os.path.join(self.path_data, "/Users/song-yeji/Desktop/p/FinalExam/bible-fullname.txt"), "rt") as fin:
+        with open(os.path.join(self.path_data, "bible-fullname.txt"), "rt") as fin:
             self.book_full_names = fin.read().splitlines()
             assert len(self.book_full_names) == 66
 
@@ -64,7 +64,7 @@ class Bible:
         # (e.g. `Genesis,50` means Genesis has 50 chapters)
         # create a dictionary named `self.max_chapter_info` with this informatino.
         self.max_chapter_info = {}
-        with open(os.path.join(self.path_data, "/Users/song-yeji/Desktop/p/FinalExam/max_chapter_info.txt"), "rt") as fin:
+        with open(os.path.join(self.path_data, "max_chapter_info.txt"), "rt") as fin:
             for line in fin.readlines():
                 abbr, max_chapter = line.split(",")
                 self.max_chapter_info[abbr] = int(max_chapter)
@@ -75,7 +75,7 @@ class Bible:
         # (e.g. `Genesis,1,31` means the first chapter of Genesis has 31 verses)
         # create a dictionary named `self.max_verse_info` with this informatino.
         self.max_verse_info = {}
-        with open(os.path.join(self.path_data, "/Users/song-yeji/Desktop/p/FinalExam/max_verse_info.txt"), "rt") as fin:
+        with open(os.path.join(self.path_data, "max_verse_info.txt"), "rt") as fin:
             for line in fin.readlines():
                 abbr, chapter_num, max_verse = line.split(",")
                 if abbr not in self.max_verse_info:
@@ -96,7 +96,7 @@ class Bible:
             ###     make sure you remove ~ and \n, and remove an empty item in the list.
             ###     this part is almost identical to Midterm Exam Q01.
             
-            shortname= "/Users/song-yeji/Desktop/p/FinalExam/" + abbr + ".txt"
+            shortname= abbr + ".txt"
 
             verses = []
             with open(shortname, "rt") as fin:
