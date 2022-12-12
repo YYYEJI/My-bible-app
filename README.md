@@ -54,5 +54,5 @@ git push
 ## Web Page URL
 
 ```bash
-
+https://yyyeji-my-bible-app-bible-app-ig5wrt.streamlit.app
 ```
