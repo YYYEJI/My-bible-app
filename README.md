@@ -28,10 +28,10 @@ git commit -m "Initial"
 ```
 
 ```bash
-git remote add origin https://github.com/hisplan2/bigmac-kiosk.git
+git remote add origin https://github.com/???/bigmac-kiosk.git
 ```
 
-where `hisplan2` should be replaced with your own GitHub username.
+where `???` should be replaced with your own GitHub username.
 
 ```bash
 git push -u origin master
