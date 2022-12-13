@@ -28,7 +28,7 @@ git commit -m "Initial"
 ```
 
 ```bash
-git remote add origin https://github.com/???/bigmac-kiosk.git
+git remote add origin https://github.com/???/My-bible-app.git
 ```
 
 where `???` should be replaced with your own GitHub username.
