@@ -48,7 +48,7 @@ git commit -m "Initial"
 ```
 
 ```bash
-git push
+git push origin master
 ```
 
 ## Web Page URL
