@@ -9,7 +9,7 @@ class Bible:
         # key   --> a tuple (book_name, chapter_num, verse_num)
         # value --> text
         self.bible = {}
-        
+
 
     def _load_book_names(self):
 
@@ -46,6 +46,7 @@ class Bible:
 
         for i in range(66):
             self.full2abbrev[self.book_full_names[i]] = self.book_abbr_names[i]
+
 
 
         ### YOUR CODE ENDS HERE
@@ -133,12 +134,11 @@ class Bible:
                 key = ()
                 value = []
 
-                
                 chapter = verse.strip()
                 chapter = verse.split("|")
                 key = (chapter[0] , int(chapter[1]), int(chapter[2]))
                 value = chapter[3].strip()
-                self.bible[key] = value
+
 
                 ### YOUR CODE ENDS HERE
 
@@ -154,8 +154,8 @@ class Bible:
 
 
                 # add a key-value pair to the `self.bible` dictionary
-                # self.bible[key] = value
-                
+                self.bible[key] = value
+
 
 
         # if your code above is correct,
@@ -190,9 +190,7 @@ class Bible:
         ### Q5) given a book name, chapter number, and verse number,
         ###     find the text by using the pre-built dictionary `self.bible`.
         ###     if not found, make sure to return `None`.
-        ###     this part is almost identical to Midterm Exam Q04.
-
-
+        ###     this part is almost identical to Midterm Exam Q04.s
 
         text = self.bible[(self.full2abbrev[book_full_name], int(chapter_num), int(verse_num))]
 
