@@ -133,13 +133,12 @@ class Bible:
                 key = ()
                 value = []
 
-                for verse in verses:
-                    chapter = verse.strip()
-                    chapter = verse.split("|")
-                    key = (chapter[0] , int(chapter[1]), int(chapter[2]))
-                    value = chapter[3].strip()
-                    self.bible[key] = value
-
+                
+                chapter = verse.strip()
+                chapter = verse.split("|")
+                key = (chapter[0] , int(chapter[1]), int(chapter[2]))
+                value = chapter[3].strip()
+                self.bible[key] = value
 
                 ### YOUR CODE ENDS HERE
 
